@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YeniDönem Biorezonans Mərkəzi – Bakı</title>
+<meta name="description" content="YeniDönem Biorezonans Mərkəzi – İlaçsız, təbii biorezonans terapiyası. Allerji, detoks, stres, parazit terapiyası. Bakı.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0D1A0E;
+  --sage:#4E7D50;
+  --sage-light:#A0C5A2;
+  --sage-pale:#EBF3EB;
+  --gold:#B8955A;
+  --gold-pale:#F7F0E6;
+  --cream:#F8F5F0;
+  --white:#FFFFFF;
+  --muted:#6B6560;
+  --border:#E2DDD6;
+  --green-btn:#14C05A;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+
+/* ── TOP BAR ── */
+.topbar{
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.6rem 3.5rem;font-size:.78rem;color:rgba(255,255,255,.55);
+}
+.topbar a{color:rgba(255,255,255,.55);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;transition:color .2s}
+.topbar a:hover{color:var(--sage-light)}
+.topbar-left,.topbar-right{display:flex;align-items:center;gap:1.5rem}
+.topbar-right a{color:rgba(255,255,255,.55)}
+
+/* ── NAV ── */
+nav{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 3.5rem;
+  position:sticky;top:0;z-index:200;
+}
+.logo{text-decoration:none}
+.logo-main{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;color:var(--ink);line-height:1}
+.logo-main span{color:var(--sage)}
+.logo-sub{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);display:block;margin-top:1px}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:.8rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:.8rem}
+.nav-social{display:flex;gap:.5rem}
+.nav-social a{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--muted);transition:all .2s}
+.nav-social a:hover{border-color:var(--sage);color:var(--sage);background:var(--sage-pale)}
+.nav-social svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.8}
+.nav-cta{background:var(--green-btn);color:#fff;padding:.58rem 1.4rem;border-radius:4px;font-size:.8rem;text-decoration:none;letter-spacing:.06em;text-transform:uppercase;font-weight:500;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--sage)}
+
+/* ── HERO ── */
+.hero{position:relative;overflow:hidden;min-height:88vh;background:var(--ink);display:flex;align-items:center}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 70% 50%, rgba(78,125,80,.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(184,149,90,.08) 0%, transparent 60%);
+}
+.hero-dots{
+  position:absolute;inset:0;
+  background-image:radial-gradient(circle, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size:28px 28px;
+}
+.hero-content{
+  position:relative;z-index:2;
+  max-width:780px;margin:0 auto;
+  padding:5rem 3.5rem;text-align:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.6rem;
+  border:1px solid rgba(78,125,80,.4);border-radius:100px;
+  padding:.4rem 1.1rem;margin-bottom:2rem;
+  font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-light);
+  animation:fadeDown .8s ease both;
+}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--green-btn);animation:pulse-live 1.5s ease-in-out infinite}
+@keyframes pulse-live{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+h1.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,6vw,5.2rem);font-weight:300;line-height:1.1;
+  color:var(--white);margin-bottom:1.5rem;
+  animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .15s both;
+}
+h1.hero-title em{font-style:italic;color:var(--sage-light)}
+h1.hero-title strong{font-weight:500}
+.hero-desc{
+  font-size:1rem;color:rgba(255,255,255,.55);line-height:1.85;
+  max-width:560px;margin:0 auto 2.5rem;
+  animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .3s both;
+}
+.hero-btns{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .9s cubic-bezier(.22,1,.36,1) .45s both}
+.btn-hero-primary{
+  background:var(--green-btn);color:#fff;
+  padding:.85rem 2rem;border-radius:5px;
+  text-decoration:none;font-size:.85rem;letter-spacing:.07em;text-transform:uppercase;font-weight:500;
+  transition:all .25s;display:inline-flex;align-items:center;gap:.5rem;
+}
+.btn-hero-primary:hover{background:var(--sage);transform:translateY(-2px)}
+.btn-hero-outline{
+  border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);
+  padding:.85rem 2rem;border-radius:5px;
+  text-decoration:none;font-size:.85rem;letter-spacing:.07em;text-transform:uppercase;
+  transition:all .25s;
+}
+.btn-hero-outline:hover{border-color:var(--sage-light);color:var(--sage-light)}
+.hero-stats{
+  display:flex;justify-content:center;gap:3rem;margin-top:3.5rem;
+  padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.08);
+  animation:fadeUp .9s ease .6s both;
+}
+.hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--gold);display:block;line-height:1}
+.hero-stat-lbl{font-size:.73rem;color:rgba(255,255,255,.35);letter-spacing:.07em;text-transform:uppercase;margin-top:.35rem;display:block}
+
+/* wave */
+.wave-sep{display:block;width:100%;overflow:hidden;line-height:0}
+.wave-sep svg{display:block;width:100%}
+
+/* ── INTRO SECTION ── */
+.intro{padding:5rem 3.5rem;background:var(--white);text-align:center}
+.section-tag{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:.9rem;display:block}
+h2.section-title{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:400;color:var(--ink);margin-bottom:1.2rem}
+.intro-desc{max-width:680px;margin:0 auto;font-size:.95rem;color:var(--muted);line-height:1.9}
+
+/* ── SERVICES BANNER GRID (Thingo-inspired) ── */
+.services-section{padding:5rem 3.5rem;background:var(--cream)}
+.services-head{margin-bottom:3rem}
+.services-head .section-tag{display:block}
+.banner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:900px){.banner-grid{grid-template-columns:repeat(2,1fr)}}
+.banner-card{
+  background:var(--white);border-radius:8px;border:1px solid var(--border);
+  overflow:hidden;position:relative;cursor:pointer;
+  transition:all .3s cubic-bezier(.22,1,.36,1);
+}
+.banner-card:hover{transform:translateY(-6px);border-color:var(--sage-light);box-shadow:0 20px 50px rgba(78,125,80,.12)}
+.banner-card-img{
+  height:180px;background:var(--sage-pale);
+  display:flex;align-items:center;justify-content:center;
+  font-size:3rem;transition:background .3s;position:relative;overflow:hidden;
+}
+.banner-card:hover .banner-card-img{background:rgba(78,125,80,.12)}
+.banner-card-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(13,26,14,.3));
+}
+.banner-card-body{padding:1.25rem 1.1rem 1.4rem}
+.banner-card-sub{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:.5rem}
+.banner-card-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:.6rem}
+.banner-card h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--ink)}
+.banner-card-arrow{width:28px;height:28px;border-radius:50%;background:var(--sage-pale);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.banner-card:hover .banner-card-arrow{background:var(--sage);border-color:var(--sage)}
+.banner-card:hover .banner-card-arrow svg{stroke:#fff}
+.banner-card-arrow svg{width:13px;height:13px;fill:none;stroke:var(--sage);stroke-width:2;transition:stroke .2s}
+.banner-card p{font-size:.82rem;color:var(--muted);line-height:1.7}
+.all-services-btn{text-align:center;margin-top:2rem}
+.btn-outline-sage{
+  display:inline-flex;align-items:center;gap:.5rem;
+  border:1px solid var(--sage);color:var(--sage);
+  padding:.7rem 1.8rem;border-radius:4px;text-decoration:none;
+  font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;
+  transition:all .25s;
+}
+.btn-outline-sage:hover{background:var(--sage);color:#fff}
+
+/* ── CTA BAND ── */
+.cta-band{
+  background:var(--sage);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:2.2rem 3.5rem;gap:2rem;flex-wrap:wrap;
+}
+.cta-band-text{color:#fff}
+.cta-band-text p{font-size:.88rem;opacity:.8;margin-top:.3rem}
+.cta-band-text strong{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400}
+.btn-cta-white{
+  background:#fff;color:var(--sage);
+  padding:.75rem 1.8rem;border-radius:4px;text-decoration:none;
+  font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;font-weight:500;
+  white-space:nowrap;transition:all .2s;flex-shrink:0;
+}
+.btn-cta-white:hover{background:var(--ink);color:#fff}
+
+/* ── WHY SECTION ── */
+.why-section{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}
+.why-visual{
+  background:var(--sage-pale);
+  display:flex;flex-direction:column;gap:1rem;
+  align-items:center;justify-content:center;padding:4rem 3rem;
+  position:relative;overflow:hidden;
+}
+.why-visual::before{
+  content:'';position:absolute;
+  width:500px;height:500px;border-radius:50%;
+  border:100px solid rgba(78,125,80,.05);
+  top:-120px;left:-120px;pointer-events:none;
+}
+.why-cert{
+  background:#fff;border-radius:8px;border:1px solid var(--border);
+  padding:.9rem 1.2rem;width:100%;max-width:300px;
+  display:flex;align-items:center;gap:.9rem;
+  transition:transform .2s;
+}
+.why-cert:hover{transform:translateX(4px)}
+.cert-ico{width:40px;height:40px;border-radius:50%;background:var(--sage-pale);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.cert-title{font-size:.85rem;font-weight:500;color:var(--ink)}
+.cert-sub{font-size:.72rem;color:var(--muted);margin-top:1px}
+.why-content{padding:4.5rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+.why-content h2{text-align:left;margin-bottom:1.2rem}
+.why-content p{color:var(--muted);line-height:1.9;margin-bottom:1rem;font-size:.93rem}
+.why-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0}
+.tag{
+  display:inline-flex;align-items:center;gap:.4rem;
+  border:1px solid var(--border);border-radius:100px;
+  padding:.4rem .9rem;font-size:.78rem;color:var(--ink);
+  background:var(--cream);
+}
+.tag-dot{width:6px;height:6px;border-radius:50%;background:var(--sage);flex-shrink:0}
+
+/* ── INSTAGRAM SECTION ── */
+.insta-section{padding:5rem 3.5rem;background:var(--cream)}
+.insta-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:2.5rem;
+}
+.insta-card{
+  aspect-ratio:1;background:var(--sage-pale);border-radius:8px;overflow:hidden;
+  position:relative;cursor:pointer;transition:transform .2s;
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.5rem;border:1px solid var(--border);
+}
+.insta-card:hover{transform:scale(1.02)}
+.insta-overlay{
+  position:absolute;inset:0;background:rgba(13,26,14,.55);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .2s;gap:.3rem;
+}
+.insta-card:hover .insta-overlay{opacity:1}
+.insta-overlay svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:1.6}
+.insta-overlay span{font-size:.72rem;color:#fff;letter-spacing:.06em;text-transform:uppercase}
+.insta-follow{text-align:center;margin-top:1.8rem}
+.btn-insta{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:#fff;border:1px solid var(--border);border-radius:4px;
+  padding:.65rem 1.5rem;text-decoration:none;color:var(--ink);
+  font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;
+  transition:all .2s;
+}
+.btn-insta:hover{border-color:var(--sage);color:var(--sage)}
+.btn-insta svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8}
+
+/* ── SIGARA/KILO BAND ── */
+.service-highlight{display:grid;grid-template-columns:1fr 1fr;background:var(--white)}
+.sh-visual{
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  padding:5rem;position:relative;overflow:hidden;font-size:6rem;
+}
+.sh-visual::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(78,125,80,.2),transparent);
+}
+.sh-content{padding:4.5rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+.sh-content h2{text-align:left;margin-bottom:1.2rem}
+.sh-content p{color:var(--muted);line-height:1.85;margin-bottom:1.5rem;font-size:.92rem}
+.sh-features{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem}
+.sh-features li{display:flex;align-items:flex-start;gap:.75rem;font-size:.88rem}
+.sh-feat-icon{width:32px;height:32px;border-radius:50%;background:var(--sage-pale);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;margin-top:1px}
+.sh-feat-text strong{display:block;color:var(--ink);font-size:.88rem;font-weight:500;margin-bottom:1px}
+.sh-feat-text span{color:var(--muted);font-size:.8rem}
+
+/* ── TESTIMONIALS ── */
+.testimonials{padding:5rem 3.5rem;background:var(--ink)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.testi-card{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  border-radius:8px;padding:1.8rem;transition:all .3s;
+}
+.testi-card:hover{background:rgba(255,255,255,.08);border-color:rgba(78,125,80,.3)}
+.testi-stars{color:var(--gold);font-size:.85rem;letter-spacing:.06em;margin-bottom:.9rem}
+.testi-card blockquote{
+  font-style:italic;font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;color:rgba(255,255,255,.82);line-height:1.75;margin-bottom:1.1rem;
+}
+.testi-author{font-size:.73rem;color:rgba(255,255,255,.3);letter-spacing:.06em}
+
+/* ── APPLY FORM ── */
+.apply-section{padding:5rem 3.5rem;background:var(--cream)}
+.apply-inner{max-width:820px;margin:0 auto;background:var(--white);border-radius:12px;border:1px solid var(--border);overflow:hidden}
+.apply-header{background:var(--ink);padding:2.5rem 3rem;display:flex;align-items:center;gap:1.5rem}
+.apply-header-ico{font-size:2rem}
+.apply-header h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:#fff}
+.apply-header p{font-size:.84rem;color:rgba(255,255,255,.45);margin-top:.3rem}
+.apply-form{padding:2.5rem 3rem;display:flex;flex-direction:column;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;padding:.75rem .9rem;
+  border:1px solid var(--border);border-radius:4px;
+  background:var(--cream);color:var(--ink);
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;
+  outline:none;transition:border-color .2s,background .2s;appearance:none;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--sage);background:#fff}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-note{font-size:.78rem;color:var(--muted);padding:.75rem 1rem;background:var(--sage-pale);border-radius:4px;border-left:3px solid var(--sage)}
+.btn-apply{
+  background:var(--sage);color:#fff;
+  padding:.9rem;border:none;border-radius:4px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:.84rem;
+  letter-spacing:.08em;text-transform:uppercase;font-weight:500;
+  cursor:pointer;transition:all .25s;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+}
+.btn-apply:hover{background:var(--ink);transform:translateY(-1px)}
+.btn-apply.success{background:#16A34A}
+
+/* ── CONTACT + MAP ── */
+.contact-section{padding:5rem 3.5rem;background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;max-width:980px;margin:3rem auto 0}
+.contact-info h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink);margin-bottom:1.5rem}
+.c-item{display:flex;gap:.9rem;margin-bottom:1.1rem;align-items:flex-start}
+.c-ico{width:36px;height:36px;background:var(--sage-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.c-text{font-size:.85rem;color:var(--muted);line-height:1.65}
+.c-text strong{display:block;color:var(--ink);font-weight:500;font-size:.88rem;margin-bottom:1px}
+.social-links-block{display:flex;gap:.65rem;margin-top:1.2rem;flex-wrap:wrap}
+.social-btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.5rem .95rem;border-radius:4px;
+  border:1px solid var(--border);text-decoration:none;
+  font-size:.78rem;color:var(--ink);
+  transition:all .2s;
+}
+.social-btn:hover{border-color:var(--sage);background:var(--sage-pale);color:var(--sage)}
+.social-btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;flex-shrink:0}
+.map-container{border-radius:8px;overflow:hidden;border:1px solid var(--border);margin-top:1.5rem}
+.map-container iframe{display:block;width:100%;height:240px;border:0}
+
+/* ── QUICK CONTACT ── */
+.quick-contact-grid{display:flex;flex-direction:column;gap:.85rem}
+.qc-item{
+  display:flex;align-items:center;gap:.9rem;
+  padding:1rem;background:var(--cream);border-radius:6px;border:1px solid var(--border);
+  text-decoration:none;color:var(--ink);transition:all .2s;
+}
+.qc-item:hover{border-color:var(--sage);background:var(--sage-pale)}
+.qc-ico{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.qc-ico.green{background:#DCFCE7}
+.qc-ico.pink{background:#FDE8F5}
+.qc-ico.blue{background:#E6F1FB}
+.qc-ico.dark{background:var(--ink)}
+.qc-title{font-weight:500;font-size:.88rem;color:var(--ink)}
+.qc-sub{font-size:.75rem;color:var(--muted);margin-top:1px}
+.qc-item.dark-card{background:var(--ink);border-color:transparent}
+.qc-item.dark-card .qc-title{color:#fff}
+.qc-item.dark-card .qc-sub{color:rgba(255,255,255,.4)}
+
+/* ── FOOTER ── */
+footer{background:#080F09}
+.footer-top{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:3rem;
+  padding:4rem 3.5rem;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.footer-logo-main{font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:#fff;display:block;margin-bottom:.8rem}
+.footer-logo-main span{color:var(--sage-light)}
+.footer-desc{font-size:.82rem;color:rgba(255,255,255,.35);line-height:1.8;margin-bottom:1.2rem}
+.footer-soc{display:flex;gap:.5rem}
+.footer-soc a{width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.footer-soc a:hover{border-color:var(--sage-light);background:rgba(78,125,80,.2)}
+.footer-soc svg{width:12px;height:12px;fill:none;stroke:rgba(255,255,255,.45);stroke-width:1.8;transition:stroke .2s}
+.footer-soc a:hover svg{stroke:var(--sage-light)}
+.footer-col-title{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:500;margin-bottom:1.2rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-links a{text-decoration:none;font-size:.83rem;color:rgba(255,255,255,.3);transition:color .2s}
+.footer-links a:hover{color:var(--sage-light)}
+.footer-contact-item{display:flex;flex-direction:column;gap:.1rem;margin-bottom:.9rem}
+.footer-contact-item span{font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase}
+.footer-contact-item a{font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.footer-contact-item a:hover{color:var(--sage-light)}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.5rem 3.5rem;font-size:.75rem;color:rgba(255,255,255,.2);flex-wrap:wrap;gap:.5rem;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{
+  position:fixed;bottom:2rem;right:2rem;z-index:999;
+  width:54px;height:54px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);
+  transition:transform .2s;
+}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+</style>
+</head>
+<body>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/994505550000" class="wa-float" title="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.557 4.14 1.53 5.874L.054 23.546a.5.5 0 00.6.6l5.732-1.466A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.95 9.95 0 01-5.101-1.4l-.365-.216-3.786.968.99-3.71-.237-.383A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="https://maps.google.com/?q=Nizami+küçəsi+12+Bakı">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Nizami küçəsi 12, Bakı
+    </a>
+    <a href="mailto:info@yenidonem.az">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      info@yenidonem.az
+    </a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://instagram.com">Instagram</a>
+    <a href="https://facebook.com">Facebook</a>
+    <a href="tel:+994125550000">+994 12 555 00 00</a>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <a class="logo" href="#">
+    <span class="logo-main">Yeni<span>Dönem</span></span>
+    <span class="logo-sub">Biorezonans Mərkəzi · Bakı</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Xidmətlər</a></li>
+    <li><a href="#haqqimizda">Haqqımızda</a></li>
+    <li><a href="#testimonials">Rəylər</a></li>
+    <li><a href="#contact">Əlaqə</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a href="https://instagram.com" title="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r=".8" style="fill:currentColor;stroke:none"/></svg>
+      </a>
+      <a href="https://wa.me/994505550000" title="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      </a>
+      <a href="https://facebook.com" title="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+    </div>
+    <a href="#apply" class="nav-cta">Müraciət et</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-dot"></span>
+      Bakının aparıcı biorezonans mərkəzi
+    </div>
+    <h1 class="hero-title">
+      İlaçsız, <em>təbii</em><br>biorezonans<br><strong>terapiyası</strong>
+    </h1>
+    <p class="hero-desc">
+      Bədəninizin elektromaqnit tezliklərini analiz edərək enerji disbalanslarını müəyyən edirik. Fərdi protokollar ilə sağlığınızı kökündən dəstəkləyirik.
+    </p>
+    <div class="hero-btns">
+      <a href="#apply" class="btn-hero-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Pulsuz Ön Görüşmə
+      </a>
+      <a href="#services" class="btn-hero-outline">Xidmətlərimiz</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="hero-stat-num">12+</span><span class="hero-stat-lbl">İllik Təcrübə</span></div>
+      <div><span class="hero-stat-num">2000+</span><span class="hero-stat-lbl">Seans Keçirildi</span></div>
+      <div><span class="hero-stat-num">98%</span><span class="hero-stat-lbl">Məmnuniyyət</span></div>
+      <div><span class="hero-stat-num">15+</span><span class="hero-stat-lbl">Terapi Sahəsi</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave -->
+<div class="wave-sep">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#0D1A0E" d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,0 L0,0 Z"/>
+  </svg>
+</div>
+
+<!-- Intro -->
+<section class="intro">
+  <span class="section-tag">Sağlam bədən, sabit ağıl</span>
+  <h2 class="section-title">Dəyişim Sizdən Başlayır!</h2>
+  <p class="intro-desc">
+    Bədəninizin ehtiyaclarını anlamaq, enerji blokajlarını aradan qaldırmaq və özünüzü daha yüngül, balanslaşmış hiss etmək istəyirsinizsə — <strong>vaxt tam indi.</strong> Müasir cihazlar, elmi yanaşmalar və ekspert dəstəyi ilə sizə xas tam bir sağlamlıq səyahəti.
+  </p>
+</section>
+
+<!-- Wave -->
+<div class="wave-sep" style="background:var(--white)">
+  <svg viewBox="0 0 1440 50" preserveAspectRatio="none" height="50" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#F8F5F0" d="M0,25 C360,50 720,0 1080,25 C1260,37 1380,10 1440,25 L1440,50 L0,50 Z"/>
+  </svg>
+</div>
+
+<!-- Services Banner Grid -->
+<section class="services-section" id="services">
+  <div class="services-head">
+    <span class="section-tag">Xidmətlərimiz</span>
+    <h2 class="section-title">Hər ehtiyaca özel dəstək</h2>
+    <p style="color:var(--muted);font-size:.92rem;max-width:560px;line-height:1.8;margin-top:.8rem">Hər müştərinin ehtiyacları fərqlidir. Süreci vahid tipli həll yolları ilə deyil, fərdi qiymətləndirmə ilə aparırıq.</p>
+  </div>
+  <div class="banner-grid">
+    <div class="banner-card">
+      <div class="banner-card-img">⚡</div>
+      <div class="banner-card-body">
+        <div class="banner-card-sub">Biorezonans</div>
+        <div class="banner-card-row">
+          <h3>Biorezonans Analizi</h3>
+          <span class="banner-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <p>Bədənin elektromaqnit tezliklərini ölçərək disbalansları aşkarlayır.</p>
+      </div>
+    </div>
+    <div class="banner-card">
+      <div class="banner-card-img">🌱</div>
+      <div class="banner-card-body">
+        <div class="banner-card-sub">Biorezonans</div>
+        <div class="banner-card-row">
+          <h3>Detoks Proqramı</h3>
+          <span class="banner-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <p>Fərdi detoks protokolları ilə toksinlərin orqanizmdən xaric olunması.</p>
+      </div>
+    </div>
+    <div class="banner-card">
+      <div class="banner-card-img">🤧</div>
+      <div class="banner-card-body">
+        <div class="banner-card-sub">Biorezonans</div>
+        <div class="banner-card-row">
+          <h3>Allerji Terapiyası</h3>
+          <span class="banner-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <p>Allergenlər müəyyən edilir, enerji uyğunsuzluqları aradan qaldırılır.</p>
+      </div>
+    </div>
+    <div class="banner-card">
+      <div class="banner-card-img">🧘</div>
+      <div class="banner-card-body">
+        <div class="banner-card-sub">Biorezonans</div>
+        <div class="banner-card-row">
+          <h3>Stress & Balans</h3>
+          <span class="banner-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <p>Sinir sistemi balansını dəstəkləyən seanslarla stress aradan qaldırılır.</p>
+      </div>
+    </div>
+    <div class="banner-card">
+      <div class="banner-card-img">🔬</div>
+      <div class="banner-card-body">
+        <div class="banner-card-sub">Biorezonans</div>
+        <div class="banner-card-row">
+          <h3>Parazit Terapiyası</h3>
+          <span class="banner-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <p>Parazit yükünü müəyyən edib enerji səviyyəsində təmizləyirik.</p>
+      </div>
+    </div>
+    <div class="banner-card">
+      <div class="banner-card-img">✨</div>
+      <div class="banner-card-body">
+        <div class="banner-card-sub">YeniDönem</div>
+        <div class="banner-card-row">
+          <h3>İmmun Dəstəyi</h3>
+          <span class="banner-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <p>İmmun sisteminizi gücləndirəcək tezlik proqramları ilə sağlığınızı qoruyun.</p>
+      </div>
+    </div>
+    <div class="banner-card">
+      <div class="banner-card-img">⚖️</div>
+      <div class="banner-card-body">
+        <div class="banner-card-sub">YeniDönem</div>
+        <div class="banner-card-row">
+          <h3>Çəki Nəzarəti</h3>
+          <span class="banner-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <p>İştahı azaldaraq sağlam çəki itkisini dəstəkləyən ilaçsız metod.</p>
+      </div>
+    </div>
+    <div class="banner-card">
+      <div class="banner-card-img">🧬</div>
+      <div class="banner-card-body">
+        <div class="banner-card-sub">YeniDönem</div>
+        <div class="banner-card-row">
+          <h3>Biofeedback Analiz</h3>
+          <span class="banner-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+        <p>Vücudun ümumi balans vəziyyətini ölçən invazif olmayan qiymətləndirmə.</p>
+      </div>
+    </div>
+  </div>
+  <div class="all-services-btn">
+    <a href="#apply" class="btn-outline-sage">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+      Bütün xidmətlər
+    </a>
+  </div>
+</section>
+
+<!-- CTA Band -->
+<div class="cta-band">
+  <div class="cta-band-text">
+    <strong>İlk addımı atmağa hazırsınız?</strong>
+    <p>Pulsuz ön görüşmə ilə uyğunluğunuzu birlikdə qiymətləndirək</p>
+  </div>
+  <a href="https://wa.me/994505550000" class="btn-cta-white">WhatsApp ilə əlaqə</a>
+</div>
+
+<!-- Why / About -->
+<section class="why-section" id="haqqimizda">
+  <div class="why-visual">
+    <div class="why-cert">
+      <div class="cert-ico">🏆</div>
+      <div><div class="cert-title">BICOM® Sertifikatlı Mərkəz</div><div class="cert-sub">Beynəlxalq akkreditasiya</div></div>
+    </div>
+    <div class="why-cert">
+      <div class="cert-ico">👩‍⚕️</div>
+      <div><div class="cert-title">Ekspert Komanda</div><div class="cert-sub">12+ il təcrübə</div></div>
+    </div>
+    <div class="why-cert">
+      <div class="cert-ico">🔬</div>
+      <div><div class="cert-title">Müasir Texnologiya</div><div class="cert-sub">Yeni nəsil cihazlar</div></div>
+    </div>
+    <div class="why-cert">
+      <div class="cert-ico">🌿</div>
+      <div><div class="cert-title">Tam Təbii Metod</div><div class="cert-sub">İlaçsız, yan təsirsiz</div></div>
+    </div>
+  </div>
+  <div class="why-content">
+    <span class="section-tag">Haqqımızda</span>
+    <h2 class="section-title">Sağlığa bütöv<br>yanaşma</h2>
+    <p>2012-ci ildən bu yana biorezonans sahəsində ixtisaslaşmış komandamızla minlərlə müştəriyə xidmət göstərmişik. Müasir cihazlar və elmi protokollar ilə işləyirik.</p>
+    <p>Biorezonans, bədənin <strong>doğal tezliklərini</strong> analiz edərək enerji blokajlarını müəyyən etmək və balanslaşdırmağı hədəfləyən tamamilə fərdi dəstək metodudur.</p>
+    <div class="why-tags">
+      <span class="tag"><span class="tag-dot"></span>Sertifikatlı mütəxəssislər</span>
+      <span class="tag"><span class="tag-dot"></span>BICOM® texnologiyası</span>
+      <span class="tag"><span class="tag-dot"></span>Fərdi müalicə planı</span>
+      <span class="tag"><span class="tag-dot"></span>Non-invaziv metod</span>
+      <span class="tag"><span class="tag-dot"></span>Yan təsir yoxdur</span>
+    </div>
+    <a href="#apply" class="btn-outline-sage" style="align-self:flex-start">Müraciət et →</a>
+  </div>
+</section>
+
+<!-- Instagram Section -->
+<section class="insta-section">
+  <div style="text-align:center">
+    <span class="section-tag">Sosial medianı izləyin</span>
+    <h2 class="section-title">@yenidonembiorezonans</h2>
+  </div>
+  <div class="insta-grid">
+    <a href="https://instagram.com" class="insta-card" style="background:#D6E8D3">
+      <span>🌿</span>
+      <div class="insta-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg><span>Instagram</span></div>
+    </a>
+    <a href="https://instagram.com" class="insta-card" style="background:#EBF3EB">
+      <span>⚡</span>
+      <div class="insta-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg><span>Instagram</span></div>
+    </a>
+    <a href="https://instagram.com" class="insta-card" style="background:#F5EEE3">
+      <span>🧘</span>
+      <div class="insta-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg><span>Instagram</span></div>
+    </a>
+    <a href="https://instagram.com" class="insta-card" style="background:#EBF3EB">
+      <span>🌱</span>
+      <div class="insta-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg><span>Instagram</span></div>
+    </a>
+  </div>
+  <div class="insta-follow">
+    <a href="https://instagram.com" class="btn-insta">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r=".8" style="fill:currentColor;stroke:none"/></svg>
+      Instagram-da izlə
+    </a>
+  </div>
+</section>
+
+<!-- Service Highlight -->
+<section class="service-highlight">
+  <div class="sh-visual">🚭</div>
+  <div class="sh-content">
+    <span class="section-tag">Sigarasız bir həyat</span>
+    <h2 class="section-title">Biorezonans ilə<br>siqaret atmaq</h2>
+    <p>Nikotin isteğini baskılayan, ilaçsız ve doğal bir yöntemle siqareti atmağı asanlaşdırır. Bədənin enerji balansını bərpa edərək asılılıq frekanslarını neytrallaşdırır.</p>
+    <ul class="sh-features">
+      <li>
+        <div class="sh-feat-icon">🌿</div>
+        <div class="sh-feat-text"><strong>İlaçsız və kimyəvi içərmir</strong><span>Biorezonans tamamilə təbii bir metoddur, bədəninizə zərər vermir.</span></div>
+      </li>
+      <li>
+        <div class="sh-feat-icon">⚡</div>
+        <div class="sh-feat-text"><strong>Sürətli və rahat tətbiq</strong><span>Tək seansda belə effektiv nəticələr alına bilər.</span></div>
+      </li>
+      <li>
+        <div class="sh-feat-icon">✅</div>
+        <div class="sh-feat-text"><strong>Yan təsirsiz və təhlükəsiz</strong><span>İlaçlara nisbətən yan təsiri yoxdur, tamamilə təhlükəsizdir.</span></div>
+      </li>
+    </ul>
+    <a href="https://wa.me/994505550000" class="btn-outline-sage" style="align-self:flex-start">Pulsuz Ön Görüşmə Al</a>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div style="text-align:center">
+    <span class="section-tag" style="color:var(--gold)">Rəylər</span>
+    <h2 class="section-title" style="color:#fff">Müştərilərimiz danışır</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"İllər boyu əziyyət çəkdiyim baş ağrıları biorezonans seanslarından sonra böyük ölçüdə azaldı. İnanılmaz nəticə!"</blockquote>
+      <div class="testi-author">Aysel K. — Bakı</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"Allerji testləri heç nə göstərməmişdi, biorezonans ilə qida uyğunsuzluqlarımı kəşf etdim. Çox şadıq!"</blockquote>
+      <div class="testi-author">Leyla M. — Sumqayıt</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>"Detoks proqramından sonra enerji səviyyəm və yuxu keyfiyyətim inanılmaz dərəcədə yaxşılaşdı. Təşəkkür edirəm!"</blockquote>
+      <div class="testi-author">Nigar R. — Bakı</div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave -->
+<div class="wave-sep" style="background:var(--ink)">
+  <svg viewBox="0 0 1440 50" preserveAspectRatio="none" height="50" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#F8F5F0" d="M0,0 C360,50 720,0 1080,30 C1260,45 1380,10 1440,20 L1440,50 L0,50 Z"/>
+  </svg>
+</div>
+
+<!-- Apply Form -->
+<section class="apply-section" id="apply">
+  <div style="text-align:center;margin-bottom:2.5rem">
+    <span class="section-tag">Müraciət</span>
+    <h2 class="section-title">Seans üçün müraciət edin</h2>
+  </div>
+  <div class="apply-inner">
+    <div class="apply-header">
+      <div class="apply-header-ico">📋</div>
+      <div>
+        <h3>Müraciət Formu</h3>
+        <p>Formu doldurun, 24 saat ərzində sizinlə əlaqə saxlayacağıq</p>
+      </div>
+    </div>
+    <div class="apply-form">
+      <div class="form-row">
+        <div class="form-group"><label>Ad Soyad</label><input type="text" id="f-name" placeholder="Adınız Soyadınız"></div>
+        <div class="form-group"><label>Telefon</label><input type="tel" id="f-phone" placeholder="+994 50 000 00 00"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>E-poçt</label><input type="email" placeholder="email@example.com"></div>
+        <div class="form-group"><label>Xidmət seçin</label>
+          <select>
+            <option value="">Seçin...</option>
+            <option>Biorezonans Analizi</option>
+            <option>Detoks Proqramı</option>
+            <option>Allerji Terapiyası</option>
+            <option>Stress &amp; Balans</option>
+            <option>Parazit Terapiyası</option>
+            <option>İmmun Dəstəyi</option>
+            <option>Çəki Nəzarəti</option>
+            <option>Biofeedback Analiz</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group"><label>Şikayət / Mesaj</label><textarea placeholder="Probleminizi qısaca izah edin..."></textarea></div>
+      <div class="form-note">🔒 Məlumatlarınız gizli saxlanılır. Müraciətdən sonra 24 saat ərzində sizinlə əlaqə saxlayacağıq.</div>
+      <button class="btn-apply" id="apply-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        Müraciəti Göndər
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact + Map -->
+<section class="contact-section" id="contact">
+  <div style="text-align:center">
+    <span class="section-tag">Əlaqə</span>
+    <h2 class="section-title">Bizimlə əlaqə</h2>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <h3 class="contact-info">Məlumatlar</h3>
+      <div class="c-item"><div class="c-ico">📍</div><div class="c-text"><strong>Ünvan</strong>Nizami küçəsi 12, Bakı, Azərbaycan</div></div>
+      <div class="c-item"><div class="c-ico">📞</div><div class="c-text"><strong>Telefon</strong><a href="tel:+994125550000" style="color:inherit;text-decoration:none">+994 12 555 00 00</a></div></div>
+      <div class="c-item"><div class="c-ico">📧</div><div class="c-text"><strong>E-poçt</strong><a href="mailto:info@yenidonem.az" style="color:inherit;text-decoration:none">info@yenidonem.az</a></div></div>
+      <div class="c-item"><div class="c-ico">🕐</div><div class="c-text"><strong>İş saatları</strong>Bazar ertəsi–Cümə: 09:00–18:00 · Şənbə: 10:00–15:00</div></div>
+      <div style="margin-top:.5rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:.7rem">Sosial şəbəkələr</div>
+      <div class="social-links-block">
+        <a href="https://instagram.com" class="social-btn">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r=".8" style="fill:currentColor;stroke:none"/></svg>Instagram
+        </a>
+        <a href="https://facebook.com" class="social-btn">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Facebook
+        </a>
+        <a href="https://wa.me/994505550000" class="social-btn">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WhatsApp
+        </a>
+        <a href="https://tiktok.com" class="social-btn">
+          <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>TikTok
+        </a>
+      </div>
+      <!-- Google Maps embed -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3!2d49.8671!3d40.4093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd0f19a63%3A0xb35fff6a3e459e8d!2sNizami+k%C3%BC%C3%A7%C9%99si%2C+Bak%C4%B1!5e0!3m2!1saz!2saz!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ink);margin-bottom:1.2rem">Sürətli əlaqə</div>
+      <div class="quick-contact-grid">
+        <a href="tel:+994125550000" class="qc-item">
+          <div class="qc-ico blue">📞</div>
+          <div><div class="qc-title">Zəng edin</div><div class="qc-sub">+994 12 555 00 00</div></div>
+        </a>
+        <a href="https://wa.me/994505550000" class="qc-item">
+          <div class="qc-ico green">💬</div>
+          <div><div class="qc-title">WhatsApp</div><div class="qc-sub">Ani cavab</div></div>
+        </a>
+        <a href="https://instagram.com" class="qc-item">
+          <div class="qc-ico pink">📸</div>
+          <div><div class="qc-title">Instagram</div><div class="qc-sub">@yenidonembiorezonans</div></div>
+        </a>
+        <a href="#apply" class="qc-item dark-card">
+          <div class="qc-ico dark" style="background:rgba(255,255,255,.1)">📋</div>
+          <div><div class="qc-title">Onlayn Müraciət</div><div class="qc-sub">Formu doldurun</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="footer-logo-main">Yeni<span>Dönem</span></span>
+      <p class="footer-desc">Hər müştərimizin ehtiyacına özel həllər hazırlayırıq. Təbii və ilaçsız metodlar, müasir cihazlar və peşəkar nəzarət ilə bədəninizə və həyat keyfiyyətinizə daimi dəyişikliklər gətirir.</p>
+      <div class="footer-soc">
+        <a href="https://instagram.com"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg></a>
+        <a href="https://facebook.com"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://wa.me/994505550000"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        <a href="https://tiktok.com"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Menyu</div>
+      <ul class="footer-links">
+        <li><a href="#">Ana Səhifə</a></li>
+        <li><a href="#haqqimizda">Haqqımızda</a></li>
+        <li><a href="#">Biorezonans Nədir?</a></li>
+        <li><a href="#services">Xidmətlərimiz</a></li>
+        <li><a href="#testimonials">Rəylər</a></li>
+        <li><a href="#contact">Əlaqə</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Xidmətlər</div>
+      <ul class="footer-links">
+        <li><a href="#">Biorezonans Analizi</a></li>
+        <li><a href="#">Detoks Proqramı</a></li>
+        <li><a href="#">Allerji Terapiyası</a></li>
+        <li><a href="#">Stress &amp; Balans</a></li>
+        <li><a href="#">Parazit Terapiyası</a></li>
+        <li><a href="#">Çəki Nəzarəti</a></li>
+        <li><a href="#">İmmun Dəstəyi</a></li>
+        <li><a href="#">Biofeedback Analiz</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Əlaqə</div>
+      <div class="footer-contact-item">
+        <span>Telefon</span>
+        <a href="tel:+994125550000">+994 12 555 00 00</a>
+      </div>
+      <div class="footer-contact-item">
+        <span>E-poçt</span>
+        <a href="mailto:info@yenidonem.az">info@yenidonem.az</a>
+      </div>
+      <div class="footer-contact-item">
+        <span>Ünvan</span>
+        <a href="https://maps.google.com/?q=Nizami+küçəsi+12+Bakı">Nizami küçəsi 12, Bakı</a>
+      </div>
+      <div class="footer-contact-item">
+        <span>İş saatları</span>
+        <a href="#">B.e–Cümə: 09:00–18:00</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 YeniDönem Biorezonans. Bütün hüquqlar qorunur.</span>
+    <span>Bakı, Azərbaycan</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+
+const applyBtn=document.getElementById('apply-btn');
+if(applyBtn){
+  applyBtn.addEventListener('click',function(){
+    const name=document.getElementById('f-name')?.value;
+    const phone=document.getElementById('f-phone')?.value;
+    if(!name||!phone){
+      this.textContent='Ad və telefon daxil edin!';
+      this.style.background='#c0392b';
+      setTimeout(()=>{
+        this.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg> Müraciəti Göndər';
+        this.style.background='';
+      },2200);
+      return;
+    }
+    this.innerHTML='✓ Müraciətiniz qəbul edildi!';
+    this.classList.add('success');
+    this.disabled=true;
+  });
+}
+
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}
+  });
+},{threshold:.1});
+document.querySelectorAll('.banner-card,.testi-card,.why-cert').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s ease, transform .5s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
